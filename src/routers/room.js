@@ -38,7 +38,7 @@ router.get("/api/v1/rooms", async (req, res) => {
   }
 });
 
-router.get("/rooms/:id", async (req, res) => {
+router.get("/api/v1/rooms/:id", async (req, res) => {
   const _id = req.params.id;
   try {
     const room = await HotelName.findById(_id);
@@ -52,7 +52,7 @@ router.get("/rooms/:id", async (req, res) => {
   }
 });
 
-router.patch("/rooms/:id", async (req, res) => {
+router.patch("/api/v1/rooms/:id", async (req, res) => {
   const _id = req.params.id;
 //   Validating the neccessary updates.
   const updates = Object.keys(req.body);
@@ -78,7 +78,7 @@ router.patch("/rooms/:id", async (req, res) => {
   }
 });
 
-router.delete("/rooms/:id", async (req, res) => {
+router.delete("/api/v1/rooms/:id", async (req, res) => {
   const _id = req.params.id;
   try {
     const room = await HotelName.findByIdAndDelete(_id);
