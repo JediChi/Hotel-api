@@ -9,6 +9,6 @@ const hotel = new Schema({
     prize: {type: Number, required: true}
 })
 
-const HotelName = mongoose.model("rooms", hotel)
+const HotelName = mongoose.model("room", hotel)
 
 module.exports = HotelName

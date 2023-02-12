@@ -9,6 +9,6 @@ const roomType = new Schema({
     // prize: {type: Number, required: true}
 })
 
-const RoomType = mongoose.model("room-type", roomType)
+const RoomType = mongoose.model("roomtype", roomType)
 
 module.exports = RoomType

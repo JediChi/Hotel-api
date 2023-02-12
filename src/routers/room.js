@@ -2,7 +2,7 @@ const express = require("express");
 const HotelName = require("../models/room");
 const router = new express.Router();
 
-router.post("/rooms", async (req, res) => {
+router.post("/api/v1/rooms", async (req, res) => {
   const rooms = new HotelName(req.body);
   try {
     await rooms.save();
@@ -12,7 +12,7 @@ router.post("/rooms", async (req, res) => {
   }
 });
 
-router.get("/rooms", async (req, res) => {
+router.get("/api/v1/rooms", async (req, res) => {
     const search = req.query.search;
     const roomType = req.query.roomType;
     const minPrice = req.query.minPrice;
