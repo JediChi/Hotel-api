@@ -4,9 +4,9 @@ const ObjectId = Schema.Types.ObjectId
 
 const hotel = new Schema({
     _id: {type: ObjectId},
-    codeName: {type: String, default: "Room 0", required: true},
+    name: {type: String, default: "Room 0", required: true},
     roomType: {type: ObjectId, required: true, ref: "RoomType"},
-    prize: {type: Number, required: true}
+    price: {type: Number, required: true}
 })
 
 const HotelName = mongoose.model("room", hotel)

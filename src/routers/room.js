@@ -56,7 +56,7 @@ router.patch("/api/v1/rooms/:id", async (req, res) => {
   const _id = req.params.id;
 //   Validating the neccessary updates.
   const updates = Object.keys(req.body);
-  const allowedUpdates = ["codeName", "type", "prize"];
+  const allowedUpdates = ["name", "roomType", "price"];
   const isValidUpdate = updates.every((update) =>
     allowedUpdates.includes(update)
   );
